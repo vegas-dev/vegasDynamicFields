@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vegas Dynamic Fields</title>
+
+	<meta name="description" content="Simplified sending of data to the server. By vegas s" />
+	<meta name="author" content="vegas s" />
+	<meta name="viewport" content="width=device-width, maximum-scale=0.8, initial-scale=0.6" />
+
+	<!-- Bootstrap 4.1.2 -->
+	<link rel="stylesheet"
+		  href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+		  integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+		  crossorigin="anonymous">
+</head>
+<body>
+
+<main class="container mt-5 mb-5">
+	<h1 class="text-center">Vegas Dynamic Fields</h1>
+	<div class="mb-4"></div>
+
+	<div id="dynamic-fields">
+		<div class="clone-fields mb-4">
+			<div class="row">
+				<div class="col-lg-4">
+					<input type="text" name="jdata[name]" placeholder="Your Name" class="form-control">
+				</div>
+				<div class="col-lg-4">
+					<input type="email" name="jdata[email]" placeholder="Your Email" class="form-control">
+				</div>
+				<div class="col-lg-3">
+					<input type="text" name="jdata[phone]" placeholder="Your Phone" class="form-control">
+				</div>
+				<div class="col-lg-1">
+					<button class="btn btn-danger pl-4 pr-4 delete-fields">x</button>
+				</div>
+			</div>
+		</div>
+		<div class="append-fields"></div>
+		<div class="btn-fields">
+			<button class="btn btn-info add-fields">Add</button>
+		</div>
+	</div>
+</main>
+
+<!-- JQuery 3.3.1 -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<!-- VegasFormSender -->
+<script src="dist/vegasDynamicFields.js"></script>
+
+<!-- Init -->
+<script>
+	$(document).ready(function () {
+		$('#dynamic-fields').vegasDynamicFields();
+	});
+</script>
+</body>
+</html>
